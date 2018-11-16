@@ -1,0 +1,1633 @@
+	shared_focus = {
+		id = WRS_The_Red_Junta
+		icon = GFX_goal_WRS_The_Red_Junta
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		x = 10
+		y = 0
+		completion_reward = {
+			add_stability = 0.07
+		}
+
+	}
+	shared_focus = {
+		id = WRS_Soviet_Factory_renewal
+		icon = GFX_goal_RAJ_Autonomous_Industry
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		x = 23
+		y = 0
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = { 
+						building = industrial_complex 
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	shared_focus = {
+		id = WRS_The_Neighbours
+		icon = GFX_goal_unknown
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		x = 29
+		y = 0
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_neighbor_of = WRS
+					NOT = { is_puppet_of = WRS }
+				}
+				add_war_support = -0.05
+			}
+		}
+
+	}
+	shared_focus = {
+		id = WRS_Soldiers_of_Steel
+		icon = GFX_goal_new_model_army
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_The_Red_Junta
+		}
+		x = 4
+		y = 1
+		completion_reward = {
+			add_war_support = 0.05
+		}
+
+	}
+	shared_focus = {
+		id = WRS_Inspire_our_People
+		icon = GFX_goal_RAJ_Socialism_Of_The_People
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Soldiers_of_Steel
+		}
+		x = 3
+		y = 2
+
+	}
+	shared_focus = {
+		id = WRS_Nationwide_Propaganda
+		icon = GFX_SLO_Peoples_Television
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Inspire_our_People
+		}
+		x = 2
+		y = 3
+
+	}
+	shared_focus = {
+		id = WRS_Inspire_our_Soldiers
+		icon = GFX_goal_RAJ_Peoples_Guard
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Soldiers_of_Steel
+		}
+		x = 5
+		y = 2
+
+	}
+	shared_focus = {
+		id = WRS_The_Civil_War_relived
+		icon = GFX_goal_focus_MAD_HOW_DID_YOU_FAIL
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Inspire_our_Soldiers
+		}
+		prerequisite = {
+			focus = WRS_Inspire_our_People
+		}
+		x = 4
+		y = 3
+
+	}
+	shared_focus = {
+		id = WRS_Loyalty_from_Birth
+		icon = GFX_POL_germanys_loyal_sons
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Nationwide_Propaganda
+		}
+		prerequisite = {
+			focus = WRS_The_Civil_War_relived
+		}
+		x = 3
+		y = 4
+
+	}
+	shared_focus = {
+		id = WRS_Glory_to_the_Heroes
+		icon = GFX_goal_RAJ_The_Army
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Inspire_our_Soldiers
+		}
+		x = 6
+		y = 3
+
+	}
+	shared_focus = {
+		id = WRS_Encourage_Women_in_the_Army
+		icon = GFX_goal_Generic_Female_Soldier02
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_The_Civil_War_relived
+		}
+		prerequisite = {
+			focus = WRS_Glory_to_the_Heroes
+		}
+		x = 5
+		y = 4
+
+	}
+	shared_focus = {
+		id = WRS_The_new_People
+		icon = GFX_OST_Unite_the_People
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Encourage_Women_in_the_Army
+		}
+		prerequisite = {
+			focus = WRS_Loyalty_from_Birth
+		}
+		x = 4
+		y = 5
+
+	}
+	shared_focus = {
+		id = WRS_Remarkable_Equipment
+		icon = GFX_goal_RAJ_rifles_guns_cannons
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_The_Red_Junta
+		}
+		x = 10
+		y = 1
+		completion_reward = {
+			add_war_support = 0.05
+		}
+
+	}
+	shared_focus = {
+		id = WRS_Focus_on_Military_Technologies
+		icon = GFX_goal_Generic_Science02
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Remarkable_Equipment
+		}
+		x = 9
+		y = 2
+
+	}
+	shared_focus = {
+		id = WRS_Red_Trucks
+		icon = GFX_goal_unknown
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Focus_on_Military_Technologies
+		}
+		x = 8
+		y = 3
+
+	}
+	shared_focus = {
+		id = WRS_Steal_from_the_Giants
+		icon = GFX_goal_RAJ_India_Foreign_Technologies
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Remarkable_Equipment
+		}
+		x = 11
+		y = 2
+
+	}
+	shared_focus = {
+		id = WRS_Build_on_the_M16
+		icon = GFX_GER_wunderwaffe
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Steal_from_the_Giants
+		}
+		prerequisite = {
+			focus = WRS_Focus_on_Military_Technologies
+		}
+		x = 10
+		y = 3
+
+	}
+	shared_focus = {
+		id = WRS_Reform_the_Motorized
+		icon = GFX_GER_land_fleet
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Build_on_the_M16
+		}
+		prerequisite = {
+			focus = WRS_Red_Trucks
+		}
+		x = 9
+		y = 4
+
+	}
+	shared_focus = {
+		id = WRS_Study_old_German_Artillery
+		icon = GFX_USA_Guns_for_Germany
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Steal_from_the_Giants
+		}
+		x = 12
+		y = 3
+
+	}
+	shared_focus = {
+		id = WRS_Support_Artillery
+		icon = GFX_goal_generic_army_artillery2
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Study_old_German_Artillery
+		}
+		prerequisite = {
+			focus = WRS_Build_on_the_M16
+		}
+		x = 11
+		y = 4
+
+	}
+	shared_focus = {
+		id = WRS_The_new_Infantry
+		icon = GFX_goal_RAJ_India_New_Training
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Reform_the_Motorized
+		}
+		prerequisite = {
+			focus = WRS_Support_Artillery
+		}
+		x = 10
+		y = 5
+
+	}
+	shared_focus = {
+		id = WRS_Superior_Minds
+		icon = GFX_goal_RAJ_The_Education
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_The_Red_Junta
+		}
+		x = 16
+		y = 1
+		completion_reward = {
+			add_war_support = 0.05
+			swap_ideas = {
+				remove_idea = WRS_soldiers_of_the_long_war
+				add_idea = WRS_soldiers_of_the_long_war_0
+			}
+			add_ideas = WRS_ambushing_0
+		}
+
+	}
+	shared_focus = {
+		id = WRS_New_Tactics
+		icon = GFX_goal_Generic_Expansionism
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Superior_Minds
+		}
+		x = 15
+		y = 2
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = WRS_soldiers_of_the_long_war_0
+				add_idea = WRS_soldiers_of_the_long_war_1
+			}
+		}
+
+	}
+	shared_focus = {
+		id = WRS_Archangelsk_Academy
+		icon = GFX_goal_RAJ_India_Clarify_Army_Role
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_New_Tactics
+		}
+		x = 14
+		y = 3
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = WRS_soldiers_of_the_long_war_1
+				add_idea = WRS_soldiers_of_the_long_war_2
+			}
+		}
+
+	}
+	shared_focus = {
+		id = WRS_Reform_ambushing
+		icon = GFX_goal_VIN_New_Militarism
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Superior_Minds
+		}
+		x = 17
+		y = 2
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = WRS_ambushing_0
+				add_idea = WRS_ambushing_1
+			}
+		}
+
+	}
+	shared_focus = {
+		id = WRS_Move_Command_Down
+		icon = GFX_goal_RAJ_National_Land_Reform
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_New_Tactics
+		}
+		prerequisite = {
+			focus = WRS_Reform_ambushing
+		}
+		x = 16
+		y = 3
+
+	}
+	shared_focus = {
+		id = WRS_Responsibility_to_the_Soldier
+		icon = GFX_goal_Generic_Army_Reform_Green
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Archangelsk_Academy
+		}
+		prerequisite = {
+			focus = WRS_Move_Command_Down
+		}
+		x = 15
+		y = 4
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = WRS_soldiers_of_the_long_war_2
+				add_idea = WRS_soldiers_of_the_long_war_3
+			}
+		}
+
+	}
+	shared_focus = {
+		id = WRS_One_with_the_Forest
+		icon = GFX_goal_VIN_Modern_Counterinsurgency
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Reform_ambushing
+		}
+		x = 18
+		y = 3
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = WRS_ambushing_1
+				add_idea = WRS_ambushing_2
+			}
+		}
+
+	}
+	shared_focus = {
+		id = WRS_This_time_it_will_work
+		icon = GFX_ORS_Strike_at_the_Peasantry
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Move_Command_Down
+		}
+		prerequisite = {
+			focus = WRS_One_with_the_Forest
+		}
+		x = 17
+		y = 4
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = WRS_ambushing_2
+				add_idea = WRS_ambushing_3
+			}
+		}
+
+	}
+	shared_focus = {
+		id = WRS_The_new_Tactics
+		icon = GFX_goal_Generic_Army_Officers
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Responsibility_to_the_Soldier
+		}
+		prerequisite = {
+			focus = WRS_This_time_it_will_work
+		}
+		x = 16
+		y = 5
+		completion_reward = {
+			hidden_effect = {
+				remove_ideas = WRS_ambushing_3
+				swap_ideas = {
+					remove_idea = WRS_soldiers_of_the_long_war_3
+					add_idea = WRS_soldiers_of_the_long_war_4
+				}
+			}
+		}
+
+	}
+	shared_focus = {
+		id = WRS_Move_Tukhachevskys_Industry_to_our_Core
+		icon = GFX_goal_WRS_Move_Industry_to_Our_Core
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Soviet_Factory_renewal
+		}
+		x = 22
+		y = 1
+		completion_reward = {
+			MIR = {
+				add_opinion_modifier = {
+					target = WRS
+					modifier = WRS_Withdrawn_Industry
+				}
+				860 = {
+					remove_building = { type = arms_factory level = 1 }
+					remove_building = { type = industrial_complex level = 1 }
+				}
+			}
+		}
+
+	}
+	shared_focus = {
+		id = WRS_A_functioning_civllian_economy
+		icon = GFX_goal_RAJ_The_Planned_Economy
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Move_Tukhachevskys_Industry_to_our_Core
+		}
+		x = 21
+		y = 2
+
+	}
+	shared_focus = {
+		id = WRS_Move_Zhukovs_Industry_to_our_Core
+		icon = GFX_goal_WRS_Move_Industry_to_Our_Core
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Soviet_Factory_renewal
+		}
+		x = 24
+		y = 1
+		completion_reward = {
+		UKH = {
+			add_opinion_modifier = {
+				target = WRS
+				modifier = WRS_Withdrawn_Industry
+			}
+			869 = {
+				remove_building = { type = arms_factory level = 1 }
+				remove_building = { type = industrial_complex level = 1 }
+			}
+		}
+		}
+
+	}
+	shared_focus = {
+		id = WRS_Back_to_Work
+		icon = GFX_GER_back_to_work
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Move_Tukhachevskys_Industry_to_our_Core
+		}
+		prerequisite = {
+			focus = WRS_Move_Zhukovs_Industry_to_our_Core
+		}
+		x = 23
+		y = 2
+
+	}
+	shared_focus = {
+		id = WRS_Agricultural_Reforms
+		icon = GFX_focus_RAJ_agricultural_aid
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_A_functioning_civllian_economy
+		}
+		prerequisite = {
+			focus = WRS_Back_to_Work
+		}
+		x = 22
+		y = 3
+
+	}
+	shared_focus = {
+		id = WRS_Breakthroughs_in_Agriculture
+		icon = GFX_goal_RAJ_India_Agriculture_Is_Hard
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Agricultural_Reforms
+		}
+		x = 21
+		y = 4
+
+	}
+	shared_focus = {
+		id = WRS_A_functioning_arms_industry
+		icon = GFX_ORS_Soviet_Arms
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Move_Zhukovs_Industry_to_our_Core
+		}
+		x = 25
+		y = 2
+
+	}
+	shared_focus = {
+		id = WRS_Mining_Reforms
+		icon = GFX_CHI_manning_the_factories
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Back_to_Work
+		}
+		prerequisite = {
+			focus = WRS_A_functioning_arms_industry
+		}
+		x = 24
+		y = 3
+
+	}
+	shared_focus = {
+		id = WRS_Archangelsk_Coal_Mines
+		icon = GFX_goal_WAL_coal_crisis
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Mining_Reforms
+		}
+		prerequisite = {
+			focus = WRS_Agricultural_Reforms
+		}
+		x = 23
+		y = 4
+
+	}
+	shared_focus = {
+		id = WRS_facilitate_Steel_Mines
+		icon = GFX_focus_generic_steel
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Mining_Reforms
+		}
+		x = 25
+		y = 4
+		completion_reward = {
+			random_owned_state = {
+			    add_resource = { 
+					type = steel amount = 15 
+				}
+			}
+		}
+	}
+		
+	shared_focus = {
+		id = WRS_Mezens_Industry
+		icon = GFX_goal_RAJ_India_Nurture_Heavy_Industry
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Archangelsk_Coal_Mines
+		}
+		prerequisite = {
+			focus = WRS_facilitate_Steel_Mines
+		}
+		x = 24
+		y = 5
+		available = {
+			862 = {
+				is_fully_controlled_by = ROOT
+				
+			}
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}	
+		completion_reward = {
+			862 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	shared_focus = {
+		id = WRS_Crush_the_Traitor
+		icon = GFX_goal_WRS_Crush_the_Traitors
+		cost = 5.00
+		available = {
+			has_war_support > 0.30
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_The_Neighbours
+		}
+		x = 29
+		y = 1
+
+	}
+	shared_focus = {
+		id = WRS_Incorporate_Syktyvkar
+		icon = GFX_USA_Begin_Integration
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Crush_the_Traitor
+		}
+		x = 28
+		y = 2
+
+	}
+	shared_focus = {
+		id = WRS_Reeducate_their_Soldiers
+		icon = GFX_goal_Generic_Forced_Conscription
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Crush_the_Traitor
+		}
+		x = 30
+		y = 2
+
+	}
+	shared_focus = {
+		id = WRS_A_Deal_With_the_Navy
+		icon = GFX_goal_RAJ_The_Navy
+		cost = 5.00
+		available = {
+			has_war_support > 0.50
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Incorporate_Syktyvkar
+		}
+		prerequisite = {
+			focus = WRS_Reeducate_their_Soldiers
+		}
+		x = 29
+		y = 3
+
+	}
+	shared_focus = {
+		id = WRS_Aim_for_an_diplomatic_solution
+		icon = GFX_goal_RAJ_India_Diplo_Japan_Border
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_A_Deal_With_the_Navy
+		}
+		mutually_exclusive = {
+			focus = WRS_Apply_Pressure
+		}
+		x = 28
+		y = 4
+
+	}
+	shared_focus = {
+		id = WRS_Apply_Pressure
+		icon = GFX_goal_Generic_Red_Army
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_A_Deal_With_the_Navy
+		}
+		mutually_exclusive = {
+			focus = WRS_Aim_for_an_diplomatic_solution
+		}
+		x = 30
+		y = 4
+
+	}
+	shared_focus = {
+		id = WRS_The_Airforce
+		icon = GFX_goal_RAJ_The_Airforce
+		cost = 5.00
+		available = {
+			has_war_support > 0.75
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Apply_Pressure
+		}
+		prerequisite = {
+			focus = WRS_Aim_for_an_diplomatic_solution
+		}
+		x = 29
+		y = 5
+
+	}
+	shared_focus = {
+		id = WRS_A_new_Nation
+		icon = GFX_OST_A_better_world
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_The_new_Infantry
+		}
+		prerequisite = {
+			focus = WRS_The_new_Tactics
+		}
+		prerequisite = {
+			focus = WRS_The_new_People
+		}
+		x = 10
+		y = 6
+
+	}
+	shared_focus = {
+		id = WRS_Usinsks_Industry
+		icon = GFX_CHI_Industrialization
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Breakthroughs_in_Agriculture
+		}
+		prerequisite = {
+			focus = WRS_Archangelsk_Coal_Mines
+		}
+		available = {
+			262 = {
+				is_fully_controlled_by = ROOT
+			}
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}	
+		x = 22
+		y = 5
+		completion_reward = {
+			262 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	shared_focus = {
+		id = WRS_The_Red_Economy
+		icon = GFX_goal_generic_graph_rising
+		cost = 5.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = POWER_STRUGGLE_STARTED
+				}
+			}
+		}
+		prerequisite = {
+			focus = WRS_Usinsks_Industry
+		}
+		prerequisite = {
+			focus = WRS_Mezens_Industry
+		}
+		x = 23
+		y = 6
+
+	}
+	# # # P O W E R  S T R U G G L E # # #
+		shared_focus = {
+		id = WRS_Death_of_Voroshilov
+		icon = GFX_goal_WRS_The_Death_of_Voroshilov
+		cost = 5.00
+		x = 10
+		y = 7
+		bypass = {
+			always = yes
+		}
+
+	}
+	shared_focus = {
+		id = WRS_The_Power_Struggle
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Death_of_Voroshilov
+		}
+		x = 10
+		y = 8
+		bypass = {
+			NOT = {
+				tag = WRS
+			}
+		}
+		completion_reward = {
+			country_event = {
+				id = WRS.51
+				hours = 62
+			}
+		}
+
+	}
+	shared_focus = {
+		id = WRS_Zhukov
+		icon = GFX_goal_WRS_Support_Zhukov
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_The_Power_Struggle
+		}
+		bypass = {
+			has_country_flag = ZHUKOV
+		}
+		mutually_exclusive = {
+			focus = WRS_Tukhachevsky
+		}
+		available = {
+			always = no
+		}
+		x = 8
+		y = 9
+
+	}
+	shared_focus = {
+		id = WRS_Rush_the_Troops_West
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Zhukov
+		}
+		x = 8
+		y = 10
+
+	}
+	shared_focus = {
+		id = WRS_The_Defense_of_the_southern_Lands
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Rush_the_Troops_West
+		}
+		x = 7
+		y = 11
+
+	}
+	shared_focus = {
+		id = WRS_Tukhachevsky
+		icon = GFX_goal_WRS_Support_Tukhachevsky
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_The_Power_Struggle
+		}
+		available = {
+			always = no
+		}
+		bypass = {
+			has_country_flag = TUKHACHEVSKY
+		}
+		mutually_exclusive = {
+			focus = WRS_Zhukov
+		}
+		x = 12
+		y = 9
+
+	}
+	shared_focus = {
+		id = WRS_Rush_the_Troops_north
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Tukhachevsky
+		}
+		x = 12
+		y = 10
+
+	}
+	shared_focus = {
+		id = WRS_New_Recruits
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Rush_the_Troops_north
+			focus = WRS_Rush_the_Troops_West
+		}
+		x = 10
+		y = 11
+
+	}
+	shared_focus = {
+		id = WRS_Every_Weapon_Counts
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_New_Recruits
+		}
+		x = 9
+		y = 12
+
+	}
+	shared_focus = {
+		id = WRS_Weapons_for_the_Peasents
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_New_Recruits
+		}
+		x = 11
+		y = 12
+
+	}
+	shared_focus = {
+		id = WRS_Rally_the_Soldiers
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Weapons_for_the_Peasents
+		}
+		x = 11
+		y = 13
+
+	}
+	shared_focus = {
+		id = WRS_Defense_of_Archangelsk
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Rush_the_Troops_north
+		}
+		prerequisite = {
+			focus = WRS_Rush_the_Troops_north
+		}
+		x = 13
+		y = 11
+
+	}
+	shared_focus = {
+		id = WRS_Assault_Kotlas
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_The_Defense_of_the_southern_Lands
+		}
+		x = 7
+		y = 12
+
+	}
+	shared_focus = {
+		id = WRS_Assault_Uchta
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Defense_of_Archangelsk
+		}
+		x = 13
+		y = 12
+
+	}
+	shared_focus = {
+		id = WRS_Everyone_into_the_Factories
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Every_Weapon_Counts
+		}
+		x = 9
+		y = 13
+
+	}
+	shared_focus = {
+		id = WRS_Incorporate_the_captured_Soldiers_from_Uchta
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Assault_Uchta
+		}
+		x = 13
+		y = 13
+
+	}
+	shared_focus = {
+		id = WRS_Incorporate_the_captured_soldiers_from_Kotlas
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Assault_Kotlas
+		}
+		x = 7
+		y = 13
+
+	}
+	shared_focus = {
+		id = WRS_Finally_Peace
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Glory_to_the_White_State
+			focus = WRS_Glory_to_the_Red_State
+		}
+		prerequisite = {
+			focus = WRS_Nearly_Over
+		}
+		x = 10
+		y = 15
+
+	}
+	shared_focus = {
+		id = WRS_Glory_to_the_Red_State
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Incorporate_the_captured_soldiers_from_Kotlas
+		}
+		prerequisite = {
+			focus = WRS_Everyone_into_the_Factories
+		}
+		x = 8
+		y = 14
+
+	}
+	shared_focus = {
+		id = WRS_Glory_to_the_White_State
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Rally_the_Soldiers
+		}
+		prerequisite = {
+			focus = WRS_Incorporate_the_captured_Soldiers_from_Uchta
+		}
+		x = 12
+		y = 14
+
+	}
+	shared_focus = {
+		id = WRS_Nearly_Over
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Rally_the_Soldiers
+		}
+		prerequisite = {
+			focus = WRS_Everyone_into_the_Factories
+		}
+		x = 10
+		y = 14
+
+	}
+
+	
+	shared_focus = {
+		id = WRS_The_Raid_of_the_Navy
+		icon = GFX_ORS_A_Second_Great_Raid
+		cost = 5.00
+		x = 16
+		y = 7
+		allow_branch = {
+			has_country_flag = NAVY_CRISIS
+		}
+
+	}
+	shared_focus = {
+		id = WRS_Plan_backfired
+		icon = GFX_goal_focus_MAD_overwhelm_the_capital
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_The_Raid_of_the_Navy
+		}
+		mutually_exclusive = {
+			focus = WRS_Cooperation_with_the_Navy
+			focus = WRS_Playing_on_our_Battlefield
+		}
+		x = 13
+		y = 8
+
+	}
+	shared_focus = {
+		id = WRS_Our_Ally_as_our_Enemy
+		icon = GFX_goal_focus_MAD_the_burglars_plot
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Plan_backfired
+		}
+		x = 13
+		y = 9
+
+	}
+	shared_focus = {
+		id = WRS_Eastwards
+		icon = GFX_goal_Generic_Expansionism
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Our_Ally_as_our_Enemy
+		}
+		x = 12
+		y = 10
+
+	}
+	shared_focus = {
+		id = WRS_Finish_off_the_Whites
+		icon = GFX_goal_Generic_Crossed_Rifles
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Our_Ally_as_our_Enemy
+		}
+		x = 14
+		y = 10
+
+	}
+	shared_focus = {
+		id = WRS_Our_Southern_Lands_restored
+		icon = GFX_goal_RAJ_Free_Housing
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Eastwards
+		}
+		prerequisite = {
+			focus = WRS_Finish_off_the_Whites
+		}
+		x = 13
+		y = 11
+
+	}
+	shared_focus = {
+		id = WRS_Cooperation_with_the_Navy
+		icon = GFX_goal_Generic_Naval_Treaty
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_The_Raid_of_the_Navy
+		}
+		mutually_exclusive = {
+			focus = WRS_Plan_backfired
+			focus = WRS_Playing_on_our_Battlefield
+		}
+		x = 16
+		y = 8
+
+	}
+	shared_focus = {
+		id = WRS_Red_Unity
+		icon = GFX_USA_The_Red_Meeting
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Cooperation_with_the_Navy
+		}
+		x = 15
+		y = 9
+
+	}
+	shared_focus = {
+		id = WRS_Voluntary_Ships_to_the_army
+		icon = GFX_goal_RAJ_The_Navy
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Cooperation_with_the_Navy
+		}
+		x = 17
+		y = 9
+
+	}
+	shared_focus = {
+		id = WRS_Encourage_Naval_Training
+		icon = GFX_goal_Generic_Coastal_Focus_Navy
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Red_Unity
+		}
+		prerequisite = {
+			focus = WRS_Voluntary_Ships_to_the_army
+		}
+		x = 16
+		y = 10
+
+	}
+	shared_focus = {
+		id = WRS_Encourage_Dockyards
+		icon = GFX_goal_RAJ_India_New_Naval_Estimates
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Encourage_Naval_Training
+		}
+		x = 16
+		y = 11
+
+	}
+	shared_focus = {
+		id = WRS_Playing_on_our_Battlefield
+		icon = GFX_goal_Generic_Army_Focus_Red
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_The_Raid_of_the_Navy
+		}
+		mutually_exclusive = {
+			focus = WRS_Cooperation_with_the_Navy
+			focus = WRS_Plan_backfired
+		}
+		x = 19
+		y = 8
+
+	}
+	shared_focus = {
+		id = WRS_Keep_the_Civilians_Safe
+		icon = GFX_goal_Generic_Refugees
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Playing_on_our_Battlefield
+		}
+		x = 19
+		y = 9
+
+	}
+	shared_focus = {
+		id = WRS_Dont_let_their_Ships_escape
+		icon = GFX_COG_Shipping_Expansion
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Keep_the_Civilians_Safe
+		}
+		x = 18
+		y = 10
+
+	}
+	shared_focus = {
+		id = WRS_Our_Path_to_their_Captial
+		icon = GFX_goal_focus_MAD_overwhelm_the_capital
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Keep_the_Civilians_Safe
+		}
+		x = 20
+		y = 10
+
+	}
+	shared_focus = {
+		id = WRS_Their_Ships_secured
+		icon = GFX_goal_RAJ_India_New_Naval_Estimates
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Dont_let_their_Ships_escape
+		}
+		prerequisite = {
+			focus = WRS_Our_Path_to_their_Captial
+		}
+		x = 19
+		y = 11
+
+	}
+	shared_focus = {
+		id = WRS_Onwards
+		icon = GFX_goal_Generic_Army_Reform_Green
+		cost = 5.00
+		prerequisite = {
+			focus = WRS_Encourage_Dockyards
+			focus = WRS_Their_Ships_secured
+			focus = WRS_Our_Southern_Lands_restored
+		}
+		x = 16
+		y = 12
+
+	}
